@@ -12,7 +12,7 @@ through the official YouTube Data API v3. It runs only on the owner's Windows PC
 - The OAuth token is stored only on the owner's PC, encrypted with Windows DPAPI.
 - Upload history and settings are stored in a local SQLite database on the same PC.
 - Nothing is sent to any server other than Google's YouTube API endpoints. If the owner enables optional
-  AI-generated titles, the video's file name and topic text (never the video itself) are sent to the
+  AI-generated titles, the video's file name, topic and metadata text (never the video itself) are sent to the
   Anthropic API.
 
 ## Sharing
