@@ -13,6 +13,8 @@ _SECRET_PATTERNS = [
     re.compile(r"GOCSPX-[0-9A-Za-z\-_]+"),                    # Google OAuth client secrets
     re.compile(r"(?i)(\"?(?:access_token|refresh_token|client_secret|id_token|api_key|password)\"?\s*[:=]\s*\"?)[^\s\",}]+"),
     re.compile(r"(?i)(upload_id=)[0-9A-Za-z\-_]+"),           # resumable upload session ids
+    re.compile(r"([?&](?:code|state)=)[^&\s\"]+"),            # OAuth redirect authorization codes
+    re.compile(r"4/0[0-9A-Za-z\-_]{20,}"),                    # Google authorization codes
     re.compile(r"(?i)(Bearer\s+)[0-9A-Za-z\-_\.]+"),
 ]
 
